@@ -1,0 +1,24 @@
+- Why apollo doesnt store data in cache as titi project?
+
+
+What does these plugins? and why doesnt have titi project these plugins?
+devDependencies:
+    - "@vue/cli-plugin-router": "~4.5.0",
+    - "@vue/cli-plugin-vuex": "~4.5.0",
+
+Why titi project has these dependencies and never use them?
+or is this used in other side?
+dependencies:
+    "apollo-boost": "^0.4.7",
+    "apollo-cache-inmemory": "^1.6.5",
+    "apollo-client": "^2.6.8",
+-> Do I have to install them in custom plush project?
+Uhmmmmmmm. Without them, graphql is working so well
+
+* All plugins "eslint" are used for preventing bug/erros in code
+
+* All babel plugins for transpiling modern js in standar js for better understanding in all browsers/devices
+
+* Sass, sass-loader for transpiling "sass" to css
+
+* Vuetify-loader for thresshaking vuetify components
