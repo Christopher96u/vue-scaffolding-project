@@ -176,6 +176,9 @@ export default {
       this.password= ''
       this.repeatedPassword=''
       this.sex= null
+      /*TESTING VUE TOASTIFY PLUGIN*/
+      this.$vToastify.success("easy-peasy");
+      /*TESTING VUE TOASTIFY PLUGIN*/
     },
     async get_Users(){
       const { data: {users: {data}} } = await apollo.query({

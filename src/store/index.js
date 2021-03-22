@@ -3,9 +3,8 @@ import Vuex from "vuex";
 import createPersistedState from "vuex-persistedstate";
 import { apollo } from "@/plugins/vue-apollo";
 import gql from "graphql-tag";
-
 Vue.use(Vuex);
-
+import designplatform from './design-platform/design-platform'
 export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
@@ -33,5 +32,7 @@ export default new Vuex.Store({
 
     }
   },
-  modules: {},
+  modules: {
+    designplatform
+  },
 });
