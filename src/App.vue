@@ -5,11 +5,11 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view />
-    <div class="text-center my-11 mx-10" style="width: 300px;">
+<!--    <div class="text-center my-11 mx-10" style="width: 300px;">
       <v-btn rounded color="primary" dark @click="get_Users">
         Example Button
       </v-btn>
-<!--      :validate="{email: true, required: true}-->
+&lt;!&ndash;      :validate="{email: true, required: true}&ndash;&gt;
     </div>
     <v-container class="mb-10">
       <v-form @submit.prevent="">
@@ -85,7 +85,7 @@
         </v-row>
       </v-form>
 
-    </v-container>
+    </v-container>-->
   </v-app>
 </template>
 <script>
@@ -97,7 +97,7 @@ import {mapActions} from 'vuex'
 export default {
   name: "App",
   components:{
-    BaseInput
+    /*BaseInput*/
   },
   data(){
     return{

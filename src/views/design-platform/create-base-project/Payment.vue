@@ -1,10 +1,10 @@
 <template>
-
+<h1>Payment View - (Here will be Stripe form, etc ...)</h1>
 </template>
 
 <script>
 export default {
-  name: "Login"
+  name: "Payment"
 };
 </script>
 

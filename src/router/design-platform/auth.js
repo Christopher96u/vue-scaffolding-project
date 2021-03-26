@@ -14,12 +14,18 @@ export const AUTH_ROUTES =   [
   {
     path: 'recoverpassword',
     name: 'RecoverPassword',
+    meta: {
+      requiresAuth: true
+    },
     component: () =>
       import('@/views/design-platform/auth/RecoverPassword'),
   },
   {
     path: 'confirmpassword',
     name: 'ConfirmPassword',
+    meta: {
+      requiresAuth: true
+    },
     component: () =>
       import('@/views/design-platform/auth/ConfirmPassword'),
   },
