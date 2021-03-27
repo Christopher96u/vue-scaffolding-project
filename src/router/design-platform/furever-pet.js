@@ -44,7 +44,7 @@ export const FUREVER_PET_ROUTES = [
     name: "Resume",
     component: () => import("@/views/design-platform/furever-pet/Resume")
   },
-  {
+  /*{
     path: "addons",
     name: "addons",
     component: () => import("@/shared/addons")
@@ -58,12 +58,12 @@ export const FUREVER_PET_ROUTES = [
     path: "add-scents",
     name: "add-scents",
     component: () => import("@/shared/add-scents")
-  },
-  {
+  },*/
+  /*{
     path: "add-products",
     name: "add-products",
     component: () => import("@/shared/add-products")
-  },
+  },*/
   {
     path: "payment",
     name: "PaymentFureverPet",
