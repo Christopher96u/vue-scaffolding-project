@@ -9,7 +9,26 @@ export default new Vuex.Store({
   plugins: [createPersistedState()],
   state: {
     users: {},
+    /*memeezCurrentStep: 1,
+    baseProjectCurrentStep: 1,*/
+    /*It will be a problem if you open 2 tabs? XD because
+    * currentStep is managing 4 stepForms(Memeez, BP, FureverPet, etc)
+    * */
     currentStep: 1,
+    baseProjectStepForm: [
+      {
+        title: "Start Project",
+        step: 1
+      },
+      {
+        title: "Choose Size",
+        step: 2
+      },
+      {
+        title: "Congrats",
+        step: 3
+      }
+    ],
     memeezStepForm: [
       {
         title: "Images",
@@ -63,7 +82,10 @@ export default new Vuex.Store({
     },
     SET_STEP: (state, payload) =>{
       state.currentStep = payload
-    }
+    },
+    /*SET_STEP_BASE_PROJECT: (state, payload) =>{
+      state.baseProjectCurrentStep = payload
+    }*/
   },
   actions: {
     async getUsers({commit}){
@@ -85,11 +107,13 @@ export default new Vuex.Store({
       commit('SET_STEP', newValue)
       return state.currentStep
     }
+
   },
   getters: {
     currentStep: state => state.currentStep,
     memeezStepForm: state => state.memeezStepForm,
-    headers: state => state.headers
+    /*baseProjectCurrentStep: state => state.baseProjectCurrentStep,*/
+    baseProjectStepForm: state => state.baseProjectStepForm
   },
   modules: {
     designplatform

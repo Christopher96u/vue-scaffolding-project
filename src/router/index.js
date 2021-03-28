@@ -4,7 +4,7 @@ import Home from "@/views/Home.vue";
 import NotFound from "@/views/NotFound"
 import { AUTH_ROUTES } from '@/router/design-platform/auth'
 import { USER_ROUTES } from "@/router/design-platform/user";
-import { BASE_PROJECT_ROUTES } from "@/router/design-platform/create-base-project";
+import { BASE_PROJECT_ROUTES } from "@/router/design-platform/base-project";
 import { FUREVER_PET_ROUTES } from "@/router/design-platform/furever-pet";
 import { MEMEEZ_ROUTES} from "@/router/design-platform/memeez";
 Vue.use(VueRouter);
@@ -46,7 +46,7 @@ const routes = [
   },
   {
     path: "/base-project",
-    component: () => import("@/views/design-platform/create-base-project/CreateBaseProject"),
+    component: () => import("@/views/design-platform/base-project/BaseProject"),
     children: BASE_PROJECT_ROUTES
   },
   {

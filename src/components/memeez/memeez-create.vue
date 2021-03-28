@@ -12,18 +12,19 @@
           </template>
         </v-stepper-header>
         <v-stepper-items>
-          <upload-images></upload-images>
-          <skin-tone></skin-tone>
-          <hair-color></hair-color>
-          <eyes-color></eyes-color>
-          <additional-info></additional-info>
-          <resume></resume>
+          <upload-images :stepNumber="1"></upload-images>
+          <skin-tone :stepNumber="2"></skin-tone>
+          <hair-color :stepNumber="3"></hair-color>
+          <eyes-color :stepNumber="4"></eyes-color>
+          <additional-info :stepNumber="5"></additional-info>
+          <resume :stepNumber="6"></resume>
           <!-- Shared Components-->
-          <addons></addons>
-          <add-sounds></add-sounds>
-          <add-scents></add-scents>
-          <add-products></add-products>
-          <congrats-memeez></congrats-memeez>
+          <addons :stepNumber="7"></addons>
+          <add-sounds :stepNumber="8"></add-sounds>
+          <add-scents :stepNumber="9"></add-scents>
+          <add-products :stepNumber="10"></add-products>
+          <!--   Congrats is not an shared component       -->
+          <congrats-memeez :stepNumber="11"></congrats-memeez>
           <!-- End Shared Components-->
         </v-stepper-items>
       </v-stepper>
@@ -59,12 +60,7 @@ export default {
     AdditionalInfo
   },
   computed: {
-    ...mapGetters(["currentStep", "memeezStepForm","headers"])
-  },
-  data(){
-    return {
-
-    }
+    ...mapGetters(["currentStep", "memeezStepForm"])
   }
 };
 </script>

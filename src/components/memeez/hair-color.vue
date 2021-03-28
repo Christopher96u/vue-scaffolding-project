@@ -1,5 +1,5 @@
 <template>
-  <v-stepper-content step="3">
+  <v-stepper-content :step="this.stepNumber">
     <v-row class="justify-center" style="height: 300px;">
       <v-col cols="6">
         <v-text-field label="hair color"></v-text-field>
@@ -9,7 +9,8 @@
       </v-col>
       <v-row no-gutters class="justify-center">
         <v-col cols="3">
-          <v-btn color="primary" @click="setStep(4)">Next</v-btn>
+          <v-btn color="secondary" @click="setStep(currentStep-1)">Back</v-btn>
+          <v-btn color="primary" @click="setStep(currentStep+1)">Next</v-btn>
         </v-col>
       </v-row>
     </v-row>
@@ -17,13 +18,22 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "hair-color",
   methods: {
     ...mapActions(['setStep'])
-  }
+  },
+  computed:{
+    ...mapGetters(['currentStep'])
+  },
+  props: {
+    stepNumber:{
+      type: Number,
+      required: true
+    }
+  },
 };
 </script>
 
