@@ -5,9 +5,9 @@
     <v-main>
       <router-view />
     </v-main>
-    <v-container>
-<!-- Insert Content -->
-    </v-container>
+<!--    <v-container>
+&lt;!&ndash; Insert Content &ndash;&gt;
+    </v-container>-->
 
   </div>
 </template>

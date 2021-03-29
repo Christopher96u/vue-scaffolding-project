@@ -12,9 +12,9 @@
           </template>
         </v-stepper-header>
         <v-stepper-items>
-          <start-project></start-project>
-          <choose-size></choose-size>
-          <congrats-base-project></congrats-base-project>
+          <start-project :stepNumber="1"></start-project>
+          <choose-size :stepNumber="2"></choose-size>
+          <congrats-base-project :stepNumber="3"></congrats-base-project>
           <!-- Shared Components-->
 
           <!-- End Shared Components-->

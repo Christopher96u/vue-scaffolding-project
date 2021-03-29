@@ -33,8 +33,8 @@
 </template>
 <script>
 import {mapGetters} from "vuex"
-import Resume from "@/components/memeez/resume";
-import AdditionalInfo from "@/components/memeez/additional-info"
+import Resume from "@/components/shared/resume";
+import AdditionalInfo from "@/components/shared/additional-info"
 import EyesColor from "@/components/memeez/eyes-color";
 import UploadImages from "@/components/memeez/upload-images";
 import SkinTone from "@/components/memeez/skin-tone";

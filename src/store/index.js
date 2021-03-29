@@ -15,6 +15,68 @@ export default new Vuex.Store({
     * currentStep is managing 4 stepForms(Memeez, BP, FureverPet, etc)
     * */
     currentStep: 1,
+    fureverPetStepForm: [
+      {
+        title: "Upload",
+        step: 1
+      },
+      {
+        title: "AnimalType",
+        step: 2
+      },
+      {
+        title: "Shape",
+        step: 3
+      },
+      {
+        title: "FurType",
+        step: 4
+      },
+      {
+        title: "PlushPosition",
+        step: 5
+      },
+      {
+        title: "TailPosition",
+        step: 6
+      },
+      {
+        title: "BodyColor",
+        step: 7
+      },
+      {
+        title: "EyesColor",
+        step: 8
+      },
+      {
+        title: "AdditionalInfo",
+        step: 9
+      },
+      {
+        title: "Resume",
+        step: 10
+      },
+      {
+        title: "Addons",
+        step: 11
+      },
+      {
+        title: "AddSounds",
+        step: 12
+      },
+      {
+        title: "AddScents",
+        step: 13
+      },
+      {
+        title: "AddProducts",
+        step: 14
+      },
+      {
+        title: "Congrats",
+        step: 15
+      }
+    ],
     baseProjectStepForm: [
       {
         title: "Start Project",
@@ -113,7 +175,8 @@ export default new Vuex.Store({
     currentStep: state => state.currentStep,
     memeezStepForm: state => state.memeezStepForm,
     /*baseProjectCurrentStep: state => state.baseProjectCurrentStep,*/
-    baseProjectStepForm: state => state.baseProjectStepForm
+    baseProjectStepForm: state => state.baseProjectStepForm,
+    fureverPetStepForm: state => state.fureverPetStepForm
   },
   modules: {
     designplatform

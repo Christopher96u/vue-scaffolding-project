@@ -2,10 +2,10 @@
   <v-stepper-content :step="this.stepNumber">
     <v-row class="justify-center" style="height: 300px;">
       <v-col cols="6">
-        <v-text-field label="choose size"></v-text-field>
+        <v-text-field label="Eeyes color"></v-text-field>
       </v-col>
       <v-col cols="6">
-        <v-text-field label="type the size!!!!"></v-text-field>
+        <v-text-field label="Insert eyes color..."></v-text-field>
       </v-col>
       <v-row no-gutters class="justify-center">
         <v-col cols="3">
@@ -21,8 +21,8 @@
 import { mapActions, mapGetters } from "vuex";
 
 export default {
-  name: "choose-size",
-  methods: {
+  name: "eyes-color",
+  methods:{
     ...mapActions(['setStep'])
   },
   computed: {

@@ -1,11 +1,12 @@
 <template>
-  <v-stepper-content step="3">
+  <v-stepper-content :step="this.stepNumber">
     <v-row class="justify-center" style="height: 300px;">
       <v-col cols="12">
         <v-text-field label="CONGRATS"></v-text-field>
       </v-col>
       <v-row no-gutters class="justify-center">
         <v-col cols="3">
+          <v-btn color="secondary" @click="setStep(currentStep-1)">Back</v-btn>
           <v-btn color="primary" @click="setStep(1)">Next</v-btn>
         </v-col>
       </v-row>
@@ -14,12 +15,21 @@
 </template>
 
 <script>
-import { mapActions } from "vuex";
+import { mapActions, mapGetters } from "vuex";
 
 export default {
   name: "congrats-base-project",
   methods: {
     ...mapActions(['setStep'])
+  },
+  computed:{
+    ...mapGetters(['currentStep'])
+  },
+  props: {
+    stepNumber: {
+      type: Number,
+      required: true
+    }
   }
 };
 </script>
