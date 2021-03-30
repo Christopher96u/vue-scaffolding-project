@@ -1,11 +1,14 @@
 <template>
-<h1>LOGIN</h1>
-<!-- <login></login> -->
+    <login-design-platform></login-design-platform>
 </template>
 
 <script>
+import LoginDesignPlatform from '@/components/design-platform/login'
 export default {
-  name: "Login"
+  name: "Login",
+  components:{
+    LoginDesignPlatform
+  }
 };
 </script>
 

@@ -39,7 +39,7 @@
 <script>
 import UploadImages from '@/components/furever-pet/upload-images'
 import AnimalType from '@/components/furever-pet/animal-type'
-import { mapGetters } from "vuex";
+import { mapGetters, mapActions } from "vuex";
 import Shape from "@/components/furever-pet/shape";
 import FurType from "@/components/furever-pet/fur-type";
 import PlushPosition from "@/components/furever-pet/plush-position";
@@ -75,6 +75,12 @@ export default {
   },
   computed: {
     ...mapGetters(["currentStep", "fureverPetStepForm"])
+  },
+  methods:{
+    ...mapActions(['setStep'])
+  },
+  created() {
+  this.setStep(1)
   }
 };
 </script>

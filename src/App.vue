@@ -2,7 +2,11 @@
   <v-app id="app">
     <div id="nav" class="">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">About</router-link>|
+      <router-link to="/auth/login">Login</router-link>|
+      <router-link to="/auth/register">Register</router-link>|
+      <router-link to="/memeez/create">Memeez</router-link>|
+      <router-link to="/furever-pet/create">FureverPet</router-link>
     </div>
     <router-view />
 <!--    <div class="text-center my-11 mx-10" style="width: 300px;">
@@ -252,7 +256,7 @@ export default {
 }
 
 #nav {
-  padding: 30px;
+  /*padding: 30px;*/
 
   a {
     font-weight: bold;

@@ -1,10 +1,14 @@
 <template>
-<h1>REGISTER</h1>
+    <register-design-platform></register-design-platform>
 </template>
 
 <script>
+import RegisterDesignPlatform from "@/components/design-platform/register";
 export default {
-  name: "Register"
+  name: "Register",
+  components:{
+    RegisterDesignPlatform
+  }
 };
 </script>
 

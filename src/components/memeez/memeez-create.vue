@@ -32,7 +32,7 @@
   </v-row>
 </template>
 <script>
-import {mapGetters} from "vuex"
+import {mapGetters, mapActions} from "vuex"
 import Resume from "@/components/shared/resume";
 import AdditionalInfo from "@/components/shared/additional-info"
 import EyesColor from "@/components/memeez/eyes-color";
@@ -61,6 +61,12 @@ export default {
   },
   computed: {
     ...mapGetters(["currentStep", "memeezStepForm"])
+  },
+  methods: {
+    ...mapActions(['setStep'])
+  },
+  created() {
+    this.setStep(1)
   }
 };
 </script>

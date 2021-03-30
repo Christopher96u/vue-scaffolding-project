@@ -31,7 +31,7 @@ const routes = [
     name: "About",
     component: () => import("../views/About.vue"),
     meta:{
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
